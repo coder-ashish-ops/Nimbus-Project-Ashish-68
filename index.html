@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan EMI & Eligibility Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ---------------- MAIN PAGE ---------------- -->
+<div class="box" id="mainPage">
+  <h2>Loan EMI & Eligibility</h2>
+
+  <label>Loan Amount (₹)</label>
+  <input id="loan" type="number">
+
+  <label>Interest Rate (%)</label>
+  <input id="rate" type="number">
+
+  <label>Tenure (Years)</label>
+  <input id="years" type="number">
+
+  <label>Your Monthly Income (₹)</label>
+  <input id="income" type="number">
+
+  <button onclick="calculate()">Calculate</button>
+  <button onclick="location.reload()" class="reset-btn">Reset</button>
+
+  <h4>Choose Theme</h4>
+  <div class="theme-btns">
+    <button onclick="setTheme('light')">Light</button>
+    <button onclick="setTheme('dark')">Dark</button>
+    <button onclick="setTheme('blue')">Blue</button>
+  </div>
+</div>
+
+<!-- ---------------- RESULT PAGE ---------------- -->
+<div class="box" id="resultPage">
+  <h2>Loan Result</h2>
+
+  <p><b>Monthly EMI:</b> ₹<span id="r_emi"></span></p>
+  <p><b>Total Interest:</b> ₹<span id="r_interest"></span></p>
+  <p><b>Total Amount:</b> ₹<span id="r_total"></span></p>
+  <p><b>Eligibility:</b> <span id="r_eligible"></span></p>
+  <p><b>Affordability:</b> <span id="r_afford"></span></p>
+
+  <button onclick="goBack()">Back</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

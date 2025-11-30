@@ -1,0 +1,98 @@
+/* ---------- THEME COLORS ---------- */
+:root {
+    --bg: #f7f7f7;
+    --box: #ffffff;
+    --text: #222;
+    --accent: #007bff;
+}
+
+.dark {
+    --bg: #0f0f0f;
+    --box: #1c1c1c;
+    --text: #f2f2f2;
+    --accent: #00d0ff;
+}
+
+.blue {
+    --bg: #eaf3ff;
+    --box: #ffffff;
+    --text: #002244;
+    --accent: #0047ff;
+}
+
+/* ---------- BODY ---------- */
+body {
+    background: var(--bg);
+    font-family: Arial;
+    height: 100vh;
+    margin: 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: 0.4s;
+}
+
+/* ---------- BOX ---------- */
+.box {
+    background: var(--box);
+    padding: 25px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    color: var(--text);
+    display: none;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+#mainPage { display: block; }
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeIn {
+    from { opacity:0; transform:translateY(25px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* ---------- INPUT ---------- */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+}
+
+input:focus {
+    border-color: var(--accent);
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.reset-btn {
+    background:#555;
+}
+
+/* Theme Buttons */
+.theme-btns button {
+    width: 30%;
+    margin-right: 2px;
+    font-size: 14px;
+}
